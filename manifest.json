@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+
+  "name": "goesNOW",
+  "description": "This extension checks the next available global entry for SFO",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "ghost-icon-12476.png",
+    "default_title": "Click here!"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["open_goes.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://goes-app.cbp.dhs.gov/goes/jsp/login.jsp"],
+      "js": ["login.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://goes-app.cbp.dhs.gov/goes/"],
+      "js": ["i_am_human_trust_me.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://goes-app.cbp.dhs.gov/goes/HomePagePreAction.do"],
+      "js": ["click_manage_interview_appointment.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://goes-app.cbp.dhs.gov/goes/HomePagePostAction.do"],
+      "js": ["click_reschedule_appointment.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://goes-app.cbp.dhs.gov/goes/CurrentSchedulePostAction.do"],
+      "js": ["select_location.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
