@@ -28,18 +28,8 @@
       "run_at": "document_idle"
     },
     {
-      "matches": ["https://goes-app.cbp.dhs.gov/goes/HomePagePreAction.do"],
-      "js": ["click_manage_interview_appointment.js"],
-      "run_at": "document_idle"
-    },
-    {
-      "matches": ["https://goes-app.cbp.dhs.gov/goes/HomePagePostAction.do"],
-      "js": ["click_reschedule_appointment.js"],
-      "run_at": "document_idle"
-    },
-    {
-      "matches": ["https://goes-app.cbp.dhs.gov/goes/CurrentSchedulePostAction.do"],
-      "js": ["select_location.js"],
+      "matches": ["https://goes-app.cbp.dhs.gov/goes/*Action.do"],
+      "js": ["find_availability.js"],
       "run_at": "document_idle"
     }
   ]

@@ -1,1 +1,0 @@
-document.querySelector('.bluebutton[name="manageAptm"]').click();
