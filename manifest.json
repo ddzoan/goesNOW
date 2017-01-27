@@ -23,7 +23,7 @@
       "run_at": "document_idle"
     },
     {
-      "matches": ["https://goes-app.cbp.dhs.gov/goes/"],
+      "matches": ["https://goes-app.cbp.dhs.gov/goes/index.jsp"],
       "js": ["i_am_human_trust_me.js"],
       "run_at": "document_idle"
     },

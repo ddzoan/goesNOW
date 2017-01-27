@@ -14,9 +14,9 @@
 
 (function maybeSelectLocation () {
   const sfEnrollmentCenterId = "5446";
-  const locationDropdown = document.getElementById('selectedEnrollmentCenter');
-  if (locationDropdown) {
-    locationDropdown.value = sfEnrollmentCenterId;
+  const locationRadioInput = document.querySelector(`input[value="${sfEnrollmentCenterId}"]`);
+  if (locationRadioInput) {
+    locationRadioInput.click();
     document.querySelector('input[name="next"]').click();
   }
 })();
