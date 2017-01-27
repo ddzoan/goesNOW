@@ -28,7 +28,7 @@
       "run_at": "document_idle"
     },
     {
-      "matches": ["https://goes-app.cbp.dhs.gov/goes/*Action.do"],
+      "matches": ["https://goes-app.cbp.dhs.gov/goes/*Action.do", "https://goes-app.cbp.dhs.gov/goes/faces/internetScheduleCalendar.jsf"],
       "js": ["find_availability.js"],
       "run_at": "document_idle"
     }
